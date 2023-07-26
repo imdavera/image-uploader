@@ -1,0 +1,92 @@
+@use "../global/typography" as *;
+
+.uploader {
+  border-radius: 1em;
+  box-shadow: rgba(150, 150, 165, 0.25) 0px 8px 24px;
+  width: 100%;
+  max-width: 450px;
+  margin: 1em;
+  padding: 2em;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+
+    &-title {
+      color: hsl(0, 0%, 30%);
+      font-size: 1.5em;
+      font-weight: 500;
+    }
+
+    &-subtitle {
+      color: hsl(0, 0%, 30%);
+      font-size: small;
+    }
+  }
+
+  &__dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    gap: 2em;
+    padding: 3em 2em;
+    border: 1px dashed hsl(215, 80%, 75%);
+    border-radius: 0.5em;
+    margin: 1.5em 0;
+
+    &-icon {
+      width: 125px;
+      height: 125px;
+      opacity: 0.75;
+    }
+
+    &-text {
+      color: hsl(0, 0%, 30%);
+      font-weight: lighter;
+      font-size: 0.8em;
+    }
+
+    &:hover {
+      border: 1px dashed hsl(215, 50%, 50%);
+    }
+
+    &:hover &-icon {
+      opacity: 1;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+
+    &-text {
+      color: hsl(0, 0%, 60%);
+      font-weight: 400;
+      font-size: 0.95em;
+    }
+
+    &-input {
+      display: none;
+    }
+
+    &-button {
+      cursor: pointer;
+      color: hsl(0, 0%, 100%);
+      border-radius: 12px;
+      padding: 0.5em 1em;
+      font-family: $main-font;
+      font-size: 14px;
+      background-color: hsl(215, 65%, 60%);
+
+      &:hover {
+        background-color: hsl(215, 50%, 50%);
+      }
+    }
+  }
+}
