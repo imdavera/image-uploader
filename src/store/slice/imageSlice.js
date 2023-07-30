@@ -25,8 +25,8 @@ const imageSlice = createSlice({
         state.state = 'loading';
       })
       .addCase(uploadImage.fulfilled, (state, action) => {
+        state.imageUrl = action.payload;
         state.state = 'succeeded';
-        state.currentImage = action.payload;
       })
       .addCase(uploadImage.rejected, (state, action) => {
         state.state = 'failed';
