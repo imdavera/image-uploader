@@ -1,0 +1,81 @@
+@use '../global/typography' as *;
+
+.displayer {
+  border-radius: 1em;
+  box-shadow: rgba(150, 150, 165, 0.25) 0px 8px 24px;
+  width: 100%;
+  max-width: 450px;
+  margin: 1em;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+
+    &-icon {
+      height: 60px;
+      width: 60px;
+      color: hsl(145, 75%, 70%);
+    }
+
+    &-title {
+      color: hsl(0, 0%, 30%);
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    border-radius: 1.5em;
+  }
+
+  &__clipper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border-radius: 8px;
+    background-color: hsl(0, 0%, 95%);
+    border: 1px solid hsl(0, 0%, 75%);
+    width: 100%;
+
+    &-text {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 14px;
+      margin-left: 4px;
+    }
+
+    &-button {
+      cursor: pointer;
+      background-color: hsl(215, 65%, 60%);
+      height: 40px;
+      width: 400px;
+      padding: 0.75em 0.25em;
+      border-radius: 12px;
+      font-size: 12px;
+      font-family: $main-font;
+      color: hsl(0, 0%, 100%);
+      position: relative;
+
+      &:hover {
+        background-color: hsl(215, 50%, 50%);
+      }
+
+      &-icon {
+        position: absolute;
+        top: 22.5%;
+        left: 40%;
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}
