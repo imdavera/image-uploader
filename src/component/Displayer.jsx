@@ -11,10 +11,10 @@ const Displayer = () => {
   return (
     <article className='displayer'>
       <section className='displayer__header'>
-        <CheckCircleIcon />
-        <h2>Uploaded Successfully!</h2>
+        <CheckCircleIcon className='displayer__header-icon' />
+        <h2 className='displayer__header-title'>Uploaded Successfully!</h2>
       </section>
-      <img src={imageUrl} alt='Uploaded Image' />
+      <img src={imageUrl} alt='Uploaded Image' className='displayer__image' />
       <Clipper text={imageUrl} />
     </article>
   );

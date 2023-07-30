@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { XMarkIcon, CheckIcon } from '@heroicons/react/24/outline';
 
@@ -7,7 +6,7 @@ const Clipper = ({ text }) => {
   const [isCopied, setIsCopied] = useState(null);
 
   useEffect(() => {
-    setTimeout(() => setIsCopied(null), 2000);
+    setTimeout(() => setIsCopied(null), 1000);
   }, [isCopied]);
 
   const handleCopy = async () => {
@@ -26,9 +25,9 @@ const Clipper = ({ text }) => {
         {isCopied === null ? (
           'Copy Link'
         ) : isCopied ? (
-          <CheckIcon />
+          <CheckIcon className='displayer__clipper-button-icon' />
         ) : (
-          <XMarkIcon />
+          <XMarkIcon className='displayer__clipper-button-icon' />
         )}
       </button>
     </section>
