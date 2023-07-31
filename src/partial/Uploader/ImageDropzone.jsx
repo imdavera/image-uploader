@@ -13,7 +13,7 @@ const ImageDropzone = () => {
     clearImageData();
 
     const file = e.dataTransfer.files[0];
-
+    
     if (!['image/jpeg', 'image/png'].includes(file.type)) {
       return setIsDragOver(false);
     }
@@ -26,25 +26,19 @@ const ImageDropzone = () => {
     setIsDragOver(true);
   };
 
-  const handleDragLeave = () => {
-    setIsDragOver(false);
-  };
+  const handleDragLeave = () => setIsDragOver(false);
 
   return (
     <section
-      className={`uploader__dropzone ${
-        isDragOver && 'uploader__dropzone--dragover'
-      }`}
+      className={`uploader__dropzone ${isDragOver && 'uploader__dropzone--dragover'}`}
       onDrop={handleUploadImage}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
     >
       <img
         src={landscapeIcon}
-        alt=''
-        className={`uploader__dropzone-icon ${
-          isDragOver && 'uploader__dropzone-icon--active'
-        }`}
+        alt='Landscape Icon'
+        className={`uploader__dropzone-icon ${isDragOver && 'uploader__dropzone-icon--active'}`}
       />
       <p className='uploader__dropzone-text'>
         {isDragOver
