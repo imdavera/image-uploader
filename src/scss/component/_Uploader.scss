@@ -32,7 +32,8 @@
     align-items: center;
     cursor: pointer;
     width: 100%;
-    gap: 2em;
+    height: 275px;
+    gap: 1.5em;
     padding: 3em 2em;
     border: 1px dashed hsl(215, 80%, 75%);
     border-radius: 0.5em;
@@ -42,6 +43,10 @@
       width: 125px;
       height: 125px;
       opacity: 0.75;
+
+      &--active {
+        opacity: 1;
+      }
     }
 
     &-text {
@@ -50,7 +55,8 @@
       font-size: 0.8em;
     }
 
-    &:hover {
+    &:hover,
+    &--dragover {
       border: 1px dashed hsl(215, 50%, 50%);
     }
 

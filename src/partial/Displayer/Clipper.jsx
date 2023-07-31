@@ -6,7 +6,7 @@ const Clipper = ({ text }) => {
   const [isCopied, setIsCopied] = useState(null);
 
   useEffect(() => {
-    setTimeout(() => setIsCopied(null), 1000);
+    setTimeout(() => setIsCopied(null), 2000);
   }, [isCopied]);
 
   const handleCopy = async () => {

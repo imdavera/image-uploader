@@ -7,7 +7,7 @@ const Uploader = () => {
       <section className='uploader__header'>
         <h1 className='uploader__header-title'>Upload your image</h1>
         <p className='uploader__header-subtitle'>
-          File should be JPG, JPEG, PNG, etc.
+          File should be JPG, JPEG or PNG
         </p>
       </section>
       <ImageDropzone />

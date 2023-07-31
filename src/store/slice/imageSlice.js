@@ -19,6 +19,9 @@ export const uploadImage = createAsyncThunk('image/upload', async (file) => {
 const imageSlice = createSlice({
   name: 'image',
   initialState,
+  reducers: {
+    clearImageData: () => initialState,
+  },
   extraReducers: (builder) => {
     builder
       .addCase(uploadImage.pending, (state) => {
@@ -38,5 +41,7 @@ const imageSlice = createSlice({
 export const selectImageUrl = (state) => state.image.imageUrl;
 export const selectImageState = (state) => state.image.state;
 export const selectImageError = (state) => state.image.error;
+
+export const { clearImageData } = imageSlice.actions;
 
 export default imageSlice.reducer;

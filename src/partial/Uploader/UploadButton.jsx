@@ -1,11 +1,12 @@
 import { useDispatch } from 'react-redux';
-import { uploadImage } from '@/store/slice/imageSlice';
+import { uploadImage, clearImageData } from '@/store/slice/imageSlice';
 
 const UploadButton = () => {
   const dispatch = useDispatch();
 
   const handleUploadImage = (e) => {
     e.preventDefault();
+    clearImageData();
 
     const file = e.target.files[0];
     dispatch(uploadImage(file));
