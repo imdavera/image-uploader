@@ -1,16 +1,16 @@
-import Uploader from "./component/Uploader/Uploader";
+import Home from './view/Home';
 
 function App() {
   const mainWrapperStyle = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100vh",
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh',
   };
 
   return (
     <main style={mainWrapperStyle}>
-      <Uploader />
+      <Home />
     </main>
   );
 }
