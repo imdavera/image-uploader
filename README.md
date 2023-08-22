@@ -33,7 +33,6 @@
 
 ![overview](https://github.com/itsjefferson/image-uploader/assets/72705177/fdefe8a6-1788-42ad-ab96-76231ea07371)
 
-
 ### Built With
 
 <!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
@@ -61,13 +60,13 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 $ git clone https://github.com/itsjefferson/image-uploader.git
 
 # Install dependencies
-$ npm install
+$ pnpm install
 
 # Edit the firebaseConfig in the config.js file with your Firebase web configuration
-const firebaseConfig = { # Your web app Firebase configuration }
+const firebaseConfig = { ... } # Your web app Firebase configuration
 
 # Run the app
-$ npm run dev
+$ pnpm dev
 
 ```
 
@@ -76,7 +75,6 @@ $ npm run dev
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example -->
 
 - [Sube archivos con Cloud Storage en la Web](https://firebase.google.com/docs/storage/web/upload-files?hl=es-419)
-
 
 ## Contact
 
